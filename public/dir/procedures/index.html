@@ -1,0 +1,283 @@
+<h1>GEM Directory: Procedures</h1>
+
+<h2>Postale</h2>
+<ul>
+	<li><strong>Can I use my domain email address with Gmail?</strong>
+	<br>
+	Sure! Open Gmail and click on Settings &gt <a href="https://mail.google.com/mail/u/0/#settings/accounts">Accounts and Import</a> > Check email from other accounts > Add an email account. Enter your domain email address and follow the steps.
+
+	When asked to enter your username, enter your full domain email address again (that's including the @yourdomainname.com part). Other settings you'll need are listed <a href="https://postale.io/client">here</a>. Please note that Gmail only supports POP. (PORT 995) (POP Server: mail.postale.io)
+
+	 You can also find a guide from Google <a href="https://support.google.com/mail/answer/21289#settings">here</a>.
+	</li>
+</ul>
+
+<hr>
+
+<p>Show tooltips false on KDE to avoid miniature window popups when hovering over open applications.</p>
+
+<hr>
+
+<h2>Git</h2>
+<h3>Rebase a branch in git</h3>
+<code>git rebase -i HEAD~3 # or commit id rather than 3</code>
+<code>git reset HEAD~</code>
+<code>git rebase --continue</code>
+
+<h3>Sync local fork with upstream</h3>
+<code>git fetch upstream</code>
+<code>git reset --hard upstream/master</code>
+
+<h3>Add multiple urls to a remote</h3>
+<code>git remote set-url --add [remote name; ex. origin] [new upstream url]</code>
+
+<h3>Set head of a remote</h3>
+<code>git remote set-head</code>
+
+<hr>
+
+<h2>Scripts</h2>
+<h3>Working with images in bash using ffmpeg</h3>
+<code>
+for f in *.jpg; do ffmpeg -i $f -vf scale="iw/2:ih/2" out/$f; done
+</code>
+
+<h3>Half the res of 4k images and output them to out/copied/</h3>
+<pre><code>
+#!/usr/bin/bash
+
+for f in *.jpg
+do
+       width=$(identify -format '%w' $f)
+       height=$(identify -format '%h' $f)
+
+       if [[ $width -gt 3968 ]] || [[ $height -gt 3968 ]]
+       then
+               ffmpeg -i $f -vf scale="iw/2:ih/2" out/scaled/$f
+       else
+               cp $f out/copied/
+       fi
+done
+</code></pre>
+
+<hr>
+
+<h2>Android</h2>
+<h3>adb over wifi</h3>
+<p>On your workstation, update to the latest version of the <a href="https://developer.android.com/studio/releases/platform-tools">SDK Platform-Tools</a>.</p>
+<p>On the device, enable <a href="https://developer.android.com/studio/debug/dev-options">developer options</a>.</p>
+<p>Enable the <strong>Wireless debugging</strong> option.</p>
+<p>On the dialog that asks <strong>Allow wireless debugging on this network?</strong>, click <strong>Allow</strong>.</p>
+<p>Select <strong>Pair device with pairing code</strong>. Take note of the pairing code, IP address, and port number displayed on the device (see image).</p>
+<p>On your workstation, open a terminal and navigate to android_sdk/platform-tools.</p>
+<p>Run adb pair ipaddr:port. Use the IP address and port number from step 5.</p>
+<p>When prompted, enter the pairing code that you received in step 5. A message indicates that your device has been successfully paired.</p>
+<p>Now it is paired.</p>
+<code>abd connect [ipaddr]:[port]</code>
+
+<hr>
+
+<h2>Misc</h2>
+<h3>Copy file directly to clipboard</h3>
+<code>xclip -sel c &lt [input_file]</code>
+
+<h3>Number of lines in a file</h3>
+<code>wc -l [filename]</code>
+
+<hr>
+
+<h2>FFMPEG</h2>
+<h3>Compress a vid with little to no quality degradation</h3>
+<code>ffmpeg -i input.avi -c:v libx264 -crf 18 -preset veryslow -c:a copy out.mp4</code>
+
+<h3>Get media file stats, such as frame rate</h3>
+<code>ffmpeg -i [filename]</code>
+
+<h3>links</h3>
+<a href="https://superuser.com/questions/138331/using-ffmpeg-to-cut-up-video">using ffmpeg to cut up video</a>
+
+<a href="https://superuser.com/questions/277642/how-to-merge-audio-and-video-file-in-ffmpeg">how to merge audio and video file in ffmpeg</a>
+
+<hr>
+
+<h2>Disks</h2>
+
+<h3>Change ext disk label</h3>
+<code>e2label [/dev/XXX] [new label]</code>
+
+<h3>Find which programs are using a mounted disk device</h3>
+<code>lsof | grep [/media/whatever]</code>
+<p>Also, consider <code>umount -l</code> (lazy umount) to prevent new processes from using the drive while you clean up.</p>
+
+<h3>Links</h3>
+<a href="https://askubuntu.com/questions/1103569/how-do-i-change-the-label-reported-by-lsblk">how do I change the label reported by lsblk</a>
+
+<hr>
+
+<h2>Web Dev</h2>
+<h3>Run a simple web server</h3>
+<p>Good environment for testing your website before pushing upstream.</p>
+<pre><code>
+# If Python version returned above is 3.X
+# On Windows, try "python -m http.server" or "py -3 -m http.server"
+python3 -m http.server
+# If Python version returned above is 2.X
+python -m SimpleHTTPServer
+</pre></code>
+
+<blockquote cite="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/set_up_a_local_testing_server">By default, this will run the contents of the directory on a local web server, on port 8000. You can go to this server by going to the URL localhost:8000 in your web browser. Here you'll see the contents of the directory listed — click the HTML file you want to run.</blockquote>
+
+<hr>
+
+<h2>Mastodon</h2>
+<h3><a href="https://mastodon.social/@lindseyb/1897278">How do I disable notification sounds on Mastodon?</a></h3>
+	<p>"Nevermind, just figured it out. Notifcations tab has a little settings thing just for that tab."</p>
+
+<hr>
+
+<h2>Metadata Handling</h2>
+<h3>Exif Handling</h3>
+	<p>Get metadata of an image: <code>exiftool [imagename.ext]</code></p>
+	<p>Wipe metadata of an image: <code>mogrify -strip [imagename.ext]</code></p>
+	
+<h3>Host Records / DNS Data</h3>
+<p>All possible records: <code>host -a [example.com]</code></p>
+<p>Selective: <code>host -t [mx/ns/txt/cname/soa] [example.com]</code></p>
+
+
+<h2>Vector Manipulation</h2>
+<h3>Convert Colored Raster Bitmap Image Into SVG</h3>
+<p>Start Inkscape.</p>
+<p><strong>File > Import</strong>: Import your bitmap.</p>
+<p>Size the bitmap and document accordingly using the panels on the right. (Object Properties and Document Properties). Best if document dimensions and object dimensions are exactly the same using atleast one whole number dimension and the object should be at X:0 and Y:0 at the top panel. Bitmap object needs to be selected to manipulate its size and positioning.</p>
+<p>Select the bitmap object.</p>
+<p><strong>Path > Trace bitmap</strong> This will open up a panel tab on the right <strong>'Trace Bitmap'</strong>.</p>
+<p>Select <strong>'Multiple scans'</strong> and select <strong>Colors</strong> in the drop down.</p>
+<p>Under <strong>'Scans'</strong> enter the number of unique colors in your bitmap.</p>
+<p>Press <strong>Update</strong> and <strong>Apply</strong>.</p>
+<p>Zoom into the graphic. Verify that the new vector is indeed a vector by zooming in and inspecting the quality. There shouldn't be obvious pixel-like artifacts.</p>
+<p>Sitting behind your fabulous new vector is your own bitmap. Drag the new vector out of the way and delete the old bitmap. If you don't do this the old bitmap will stay embedded in the SVG.</p>
+<p><strong>File > Save</strong></p>
+
+<h2>Package Management</h2>
+<h3>Install A Third Party Python Package</h3>
+<p><code>python setup.py install</code></p>
+<p>May need to use <code>sudo</code>.</p>
+
+
+<h2>High Level Networking</h2>
+<h3>Lighttpd Config For Serving Gunzip Compressed SVGs (.svgz)</h3>
+<pre><code>
+server.document-root = "~/asset-server/" 
+
+server.port = 3666
+
+server.modules += (
+    "mod_setenv"
+)
+
+$HTTP["url"] =~ "svgz" {
+        setenv.add-response-header  = ( "Content-Encoding" => "gzip")
+}
+
+mimetype.assign = (
+  ".html" => "text/html", 
+  ".txt" => "text/plain",
+  ".jpg" => "image/jpeg",
+  ".png" => "image/png",
+  ".svg" => "image/svg+xml",
+  ".svgz" => "image/svg+xml"
+)
+
+</code></pre>
+
+<h2>Linux on Android Devices</h2>
+<p>Softwares:</p>
+<p> - Odin</p>
+<p> - twrp</p>
+
+<h2>System Administration</h2>
+<h3>Human Readable Size of File</h3>
+<code>du -h [filename]</code>
+
+<h3>Set Dynamic Library Search Path For An Executable</h3>
+<code>LD_LIBRARY_PATH=[search path, ex ./] [executable file]</code>
+
+<h3>Clean up a dirty NTFS partition</h3>
+<pre>"The disk contains an unclean file system"</pre>
+<code>ntfsfix [partition path, ex. /dev/sdb1]</code>
+
+<h3>Mount A Disk Image</h3>
+<code>sudo kpartx -a -v [example.img]</code>
+<code>sudo mount /dev/mapper/loop[7p2] [/mount/path]</code>
+<pre>Cleanup afterwards</pre>
+<code>sudo kpartx -d [example.img]</code>
+
+<h3>Get total human readable size of directory</h3>
+<code>du -shc [path optionally blank for current dir]</code>
+
+<hr>
+
+<h2>Networking</h2>
+<h3>To set up an HTTP proxy (for HTTP and HTTPS traffic):</h3>
+<code>export http_proxy="http://proxy.gentoo.org:8080"</code>
+
+<h3>Configure SSH Deamon</h3>
+<code>sudo ssh-keygen -f /etc/ssh/ssh_host_rsa_key -N '[myverylongpasswordhere]' -b 4096 -t rsa</code>
+
+<hr>
+
+<h2>Emulation</h2>
+<h3>QEMU</h3>
+
+<h2>Web Administration</h2>
+<h3>Example DNS Configuration For GitLab Pages; altendo.org</h3>
+<table>
+	<tr>
+		<td>A Record:</td>
+		<td>@</td>
+		<td>35.185.44.232</td>
+	</tr>
+
+	<tr>
+		<td>CNAME Record:</td>
+		<td>altendo.org</td>
+		<td>gemtendo.gitlab.io.</td>
+	</tr>
+
+	<tr>
+		<td>CNAME Record:</td>
+		<td>www</td>
+		<td>altendo.org.</td>
+	</tr>
+
+	<tr>
+		<td>TXT Record:</td>
+		<td>@</td>
+		<td>gitlab-pages-verification-code=899844586cd42e448cf003ba646bb377</td>
+	</tr>
+</table>
+
+<hr>
+
+<h2>Searching and Discovery</h2>
+<h3>Search forums.gentoo.org with the query 'f2fs ext4' using Google</h3>
+<code>site:forums.gentoo.org f2fs ext4</code>
+
+<hr>
+
+<h2>Bash Environment</h2>
+<h3>Change the static characters before your text prompt in a bash console</h3>
+<code>export PS1="[enter text here] ${PS1}"</code>
+
+<hr>
+
+<h2>Network Administration</h2>
+<h3>Use Angry IP Scanner to discover machines on LAN</h3>
+<p>It's a solid program that just works for discovering machines connected to the local network.</p>
+
+<hr>
+
+<h2>pacman - Arch Linux package manager</h2>
+<h3>list files owned by package</h3>
+<code>pacman -Ql [package]</code>

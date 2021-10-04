@@ -1,0 +1,62 @@
+<h1>GEM Draft: Ideas</h1>
+
+<p>--- Libre Package Bundle ---</p>
+<p>A program that coordinates libre services.</p>
+<p>Let's you pick and choose paid services and then pay for them all at once automatically.</p>
+<p>Tries to integrate and compensate so that your experience using secure libre services is at least comperable to otherwise using properietary stuff.</p>
+
+<p>--- Browser Hypervisor ---</p>
+<p>Write a program which supervises browser page instances under it and let's you productively manage many pages at once.</p>
+<p>Throttle pages which are hogging resources.</p>
+
+
+<h2>Cloud Services</h2>
+<p>--- ---</p>
+<p>An interactive disk image builder with web browser GUI. This as apposed to just choosing some prebuilt distro.</p>
+
+<p>--- SOM Based Server Racks ---</p>
+<p>SOM stands for system on a module. SOMS are typically a rectangular PCB with simple leads fabricated to fit into a DIMM slot on a larger board or system.</p>
+
+<p>A SOM typically houses a more or less complete system. It has an SoC (System on a Chip), which is typically ARM based, a small linux capable flash module (typically eMMC) and some RAM.</p>
+
+<p>Providing a cloud service utilizing embedded-type SOMs rather than complete high end x86 systems is potentially highly economical. The current typical retail price of a SOM in question iss ~$30. These SOMs are low power and they often incorporate graphics rendering hardware. Performance wise they are not in the same tier as a modern amd64 processor, although there is potential for SOMs to catch up some with time and investment.</p>
+
+<p>Note: In the future we may create or recieve a RISC-V based SoC SOM, which would be fantastic and superior to ARM and RISC-V is higher performance and lower power (~%40) than ARM.</p>
+
+<p>--- Lightweight Provisioning Standard and API ---</p>
+<p>There can be a standard protocol and API for dealing with computing resources (memory, disk, CPU cycles, etc) provisioned to a user.</p>
+
+<p>A typical cloud service (ex. Google Drive) is centralized and largely holds onto it's provisioned resources tightly.</p>
+
+<p>Rather it is more efficient for one or more services to formally provisions their users resources for which they privately own cryptography and/or legally.</p>
+
+<p>In this way the provisioners are essentially providing 'infrastructure as a service' to their users.</p>
+
+<p>The draft API protocol standard is the glue that cleanly empowers users and developers to use their provisions. Their can be one simple and lightweight standard for this that cuts down the bloat of using potentially several propreitary APIs and interfaces.</p>
+
+
+<h2>Activism</h2>
+<p>--- Courage Fund ---</p>
+<p>Fund people who commmit acts of leftist courage.</p>
+<p>For example Lauren Gibson (a 19 year old girl) is being potentially charged with a hate crime for stomping on a blue lives matter sign in front of a police officer; A anti-facist teacher in Natomas California is being witch hunted by backwards thinking people for his crime of exposing his students to forward thinking ideas.</p>
+<p>Both of these people need to be rewarded for their courage so that they know they did the right thing and that in the future others will be reasurred of that. We allow for the right wing fuckerony mob to hunt leftists without recourse.</p>
+
+
+<h2>Modern Production</h2>
+<p>--- New Fabrication System ---</p>
+<p>I did a good deal of work on 3D printing and other advanced forms of fabrication when I was younger.</p>
+<p>During that time I got to know the common RepRap based systems in deployment on low end 3D printers. Even on high end 3D printing systems (often times even multi-thousand dollar systems) the same basic mechanical and digital architecture was in place.</p>
+<p>A simple 3D printer would require four NEMA 14 hybrid stepper motors, a metal hotend, a power supply, and a control board.</p>
+<p>This new system will modify every part of that system except the hotend, but potentially that too.</p>
+<p>Efforts will be made to cut down the two mechanical parts of the system, the motors and the hotend, both in price and in power usage.</p>
+<p>The motors could be cut down by employing <a href="https://www.eminebea.com/en/product/rotary/steppingmotor/pm/">PM (Permanent Magnet) Stepper Motors</a> rather than hybrid stepper motors which are higher end - doing so may entail higher level modification to the mechanical system [1]</p>
+<p>To cut down on price and energy usage of the hotend, a new hotend type will be employed that has a lower volume throughput as volume throughput is defined by: nozzle size * print speed. Essentially our new hotend will be smaller and lower energy. As a consiquence print speed will be slower, but print detail and quality will be greater.</p>
+
+<p>A typical power supply is a large monolithic 12V unit that goes for about $20. We may need to produce our own smaller unit potentially even using our own custom ASIC. Voltages will likely be modified and potentially increased for this new system.</p>
+
+<p>The new board will utilize a new ASIC at its core. The ASIC will have at least one RISC-V core with connectivity. The ASIC will also integrate within itself stepping circuitry. A typical reprap system utilizes 4 our more stepper drivers which are a minimum of $5 each. Instead the ASIC will likely only need to generate an analog signal internally using a DAC and wire that to a simplified unit that gives corresponding levels of power to the PM stepper motors.</p>
+
+<p>doing so may entail higher level modification to the mechanical system: PM stepper motors are generally lower resolution hybrid stepper motors. If microstepping isn't enough to achieve optimal quality then a simple gearbox or similiar system may be necessary.</p>
+
+
+<!--tags: riscv, som-->

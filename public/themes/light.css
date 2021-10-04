@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@900&display=swap');
+
+* {
+	text-align: center;
+}
+
+body {
+	background-color: #aeb999;
+}
+
+address {
+	overflow-wrap: break-word;
+}
+
+:root {
+        --gem-green: #aeb999;
+		--green0: #728f3b;
+		--green1: #476a03;
+		--voxim-yellow: #ffff7f;
+		--soft-blue: #55aaff;
+		--black-red: #680000;
+
+		--altendo-pinky-red: #fc7796;
+		--altendo-greenie-gold: #f0f549;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	/*
+	font-family: 'Fredoka One', cursive;
+	color: #204f00;
+	-webkit-text-stroke: 0.05em pink;
+	*/
+	font-family: 'Inter', sans-serif;
+	color: #71A7D5;
+	color: var(--black-red);
+	font-weight: 900;
+	size: 800%;
+
+	margin-bottom: 0;
+}
+
+p, a, li, blockquote, table, th, tr, td {
+	/*font-family: 'Inconsolata';*/
+	font-family: 'Inter';
+	/*color: #AA98A9;*/
+}
+
+p, blockquote, table {
+	background-color: #D0D7C4;
+	text-align: center;
+	border-radius: 0.5em;
+}
+
+strong {
+	color: #ff06a8;
+}
+
+table {
+	margin: auto;
+	border: 2px solid white;
+	margin-bottom: 0.5em;
+	margin-top: 0.5em;
+}
+
+tr, th, td {
+	border: 1px solid green;
+}
+
+thead {
+	background-color: pink;
+}
+
+p.bold {
+	border: 0.2em solid blue;
+}
+
+p.proposition {
+	border: 0.2em solid green;
+}
+p.legislation {
+	border: 0.2em solid brown;
+}
+
+hr {
+	/*border: 0.2em solid black;*/
+}
+
+hr.t1 {
+	padding: 0;
+    width: 80%;
+}
+
+hr.t2 {
+        width: 70%;
+}
+
+hr.t3 {
+        width: 60%;
+}
+
+hr.t4 {
+        width: 50%;
+}
+
+hr.t5 {
+        width: 40%;
+}
+
