@@ -1,0 +1,68 @@
+GEMX - GEM Supersystem for Linux, middleware aggregate providing a consistent dev environment and platform for GEM software products
+
+GEM Linux Installer - A semi-graphical meta distribution img for installing Linux onto new computers.
+
+GEMFS - meta overlay fs over ext4 or btrfs
+
+GEMU - GEM Emulation, general purpose simulation software for increasing the efficiency of physical systems/products design.
+
+Voxim - Voxel Simulation, general creative interactive software system.
+
+GEM Interactive Bible - mythilogical media series rendered in 4K HDR 120FPS. ray traced photorealistic characters and scenes. focus on post capitalist world where saints have been manufactured by the reds for positive political and cultural purposes.
+
+Voca - artificial vocal synthesis, song
+
+GemRen - advanced media renderer with ray tracing and modular effects
+
+Meme Maker - easily create based, stunning and sophisticated memes without branding or comprimize.
+
+Central Registry - intregal component to GEMX is the central registry. I large database of key pairs, tags and relationships.
+
+Browser - potentially based on agregore
+
+Study Mate
+
+Executive Desk
+
+DisCO Chain Implementation - alternative system to ethereum with the intended purpose of enabling anarchist and communist cooporation while being simple and sustainable, incorporating texts from disco.coop
+
+Virtual Commune - essentially our social collaborative platform
+
+GEM Framework - shared code framework written primarily in C++, Python and Markup, executing in the GEMx supersystem environment.
+- standard multitasking system
+- game engine framework
+- common algorithms/structures/datatypes enclave
+- graphics and rendering system
+
+
+---
+GEM Workspace - Graphical interactive superstructure built upon GEMx.
+- Apps and systems are horizontally integrated for user manipulation within the Workspace.
+- Tasks and procedures are optimized rather trivially autonomatically and through user manipulation.
+- Supporting a simple and robust remote rendering model incorporating vectors, events and caching (vector+cache) to improve latency and fidelity without sacraficing image quality.
+
+-- Same Thing --
+GDE - GEM Desktop Environment, built with vector graphics and html and remote client/server desktop forwarding. in depth graphical tooling. multitasking, archiving and interest management tools. ; Xorg encapsulation
+---
+
+Synthetic Psilocibin
+
+Pig Shooter - FPS shoot up fascist pigs
+
+GEM Fabricator - A new 3D Plastic printing machine (3D Printer) issued by GEM. Designed for accessibility in price and repairability. A great tool to accompany the GEM software supersystem.
+
+PyCAD - design CAD in python, sorta like OpenSCAD
+
+Advanced Session Manager - maintain state and session across powerstates and caching states, essentially I don't want to constantly have to manually repeat actions after work has already been flushed from RAM.
+
+GEM Linux GEN - A graphical indepth linux installation generator and bootstrapper generally intended as a medium for industrial usage and as a host for gemx.
+
+Linux Discovery Engine - A specialized search engine browser and database/index specifically for using Linux and accessing Linux and FOSS knowledge.
+
+Language Deck - Accelerated imersive language learning program. Teaches alphabets, pronunciation, writing and reading. Includes language specific libraries of media and written content. Integrates wikis and phased translation so that you can read articles partially in your target language and partially in your native language. Simple audio meetings and knowledge center. Facilitates studying multiple languages together. hyoutu.be/Pi5taR18uZ8 (f*ck the pentagon)
+
+cryedit - wrapper utility for editing files and archives which are securely encrypted (aes256) using existing tools and editors such as vim or nano and existing libraries such as tar and gpg.
+
+Manipulation Framework - general standard for designing with various data inputs and outputs. common framework for dealing with CAD, image manipulation, video editing, music, modeling, coding/scripting
+
+LibreHop - FOSS clone of Tiles Hopper app by Amanotes. there will be no ads and battery draining as their is in the original.
