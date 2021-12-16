@@ -65,4 +65,8 @@ cryedit - wrapper utility for editing files and archives which are securely encr
 
 Manipulation Framework - general standard for designing with various data inputs and outputs. common framework for dealing with CAD, image manipulation, video editing, music, modeling, coding/scripting
 
-LibreHop - FOSS clone of Tiles Hopper app by Amanotes. there will be no ads and battery draining as their is in the original.
+LibreHop - FOSS clone of Tiles Hopper app by Amanotes. there will be no ads and battery draining as there is in the original. will likely be built within the browser context with Hilo3d as renderer.
+
+A ray tracing project - code base for proliferating easy and simple ray tracing tools for art, media and propaganda
+
+A public project bulletin and workspace on the site. a project can be stored in a special format or directory, it can have linked repositories, references and stars, linked funding, contributer graphs, linked wiki, working drafts, etc...
